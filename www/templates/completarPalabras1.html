@@ -4,13 +4,31 @@
         <div class="spacer" style="height: 100px;"></div>
         <div>
             <h1>
-                Árb
+                Árb__
             </h1>
         </div>
-        <form class="list">
+        <!-- <form class="list">
             <ion-checkbox>ol</ion-checkbox>
             <ion-checkbox>ar</ion-checkbox>
-        </form>
-        <a ui-sref="menu.felicidades" id="completarPalabras1-button9" class="button button-positive  button-block icon ion-checkmark-circled">Verifcar</a>
+        </form> -->
+          <ion-item-group>
+            <ion-item>
+              <ion-radio name="radio" ng-repeat="item in items">{{item}}</ion-radio>
+            </ion-item>
+          </ion-item-group>
+        <!-- <a ui-sref="menu.felicidades" id="completarPalabras1-button9" class="button button-positive  button-block icon ion-checkmark-circled">Verifcar</a> -->
+        <button onclick="opcion.verificar()" type="button" class="button button-positive  button-block icon ion-checkmark-circled">Verificar</button>
+
     </ion-content>
 </ion-view>
+<script type="text/javascript">
+  var original = document.getElementsByName("radio").checked;
+    function verificar() {
+      if (original == 'ol') {
+        document.getElementsByName('radio').checked = false;
+        window.location="menu.felicidades";
+      } else {
+        alert('siga intentando');
+      }
+    }
+</script>
