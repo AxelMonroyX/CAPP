@@ -91,12 +91,23 @@ angular.module('app.routes', [])
       }
     }
   })
+
   .state('menu.completarPalabras2', {
     url: '/CompletarPalabras1',
     views: {
       'side-menu21': {
         templateUrl: 'templates/completarPalabras2.html',
         controller: 'completarPalabras1Ctrl2'
+      }
+    }
+  })
+
+    .state('menu.completarPalabras3', {
+    url: '/CompletarPalabras1',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/completarPalabras3.html',
+        controller: 'completarPalabras1Ctrl3'
       }
     }
   })
