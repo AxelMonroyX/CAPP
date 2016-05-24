@@ -1,0 +1,36 @@
+<ion-view title="Selecciona una opción" id="page10">
+    <ion-content padding="true" class="has-header">
+        <form class="list"></form>
+         <div class="item ">
+    <img style="height: 100px " src="img/raton.jpg">
+
+  </div>
+        
+        <div>
+      
+            <h1>
+                Ra__
+            </h1>
+        </div>
+
+        <!-- <form class="list">
+            <ion-checkbox>ol</ion-checkbox>
+            <ion-checkbox>ar</ion-checkbox>
+        </form> -->
+          <ion-item-group>
+            <ion-item>
+              <ion-radio name="radio" id="radiobuton" ng-repeat="item in items"  ng-click="speakText('Ra'+'{{item}}'); respuesta('{{item}}')">{{item}}</ion-radio>
+            </ion-item>
+          </ion-item-group>
+        <!-- <a ui-sref="menu.felicidades" id="completarPalabras1-button9" class="button button-positive  button-block icon ion-checkmark-circled">Verifcar</a> -->
+        <button ng-click="verificar()" type="button" class="button button-positive  button-block icon ion-checkmark-circled">Verificar</button>
+
+
+         
+
+  </div>
+
+
+
+    </ion-content>
+</ion-view>

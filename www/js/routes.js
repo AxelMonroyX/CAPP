@@ -112,6 +112,16 @@ angular.module('app.routes', [])
     }
   })
 
+     .state('menu.completarPalabras4', {
+    url: '/CompletarPalabras1',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/completarPalabras4.html',
+        controller: 'completarPalabras1Ctrl4'
+      }
+    }
+  })   
+
   .state('menu.instrucciones', {
     url: '/instrucciones',
     views: {
