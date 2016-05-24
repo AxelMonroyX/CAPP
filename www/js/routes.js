@@ -20,22 +20,22 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.cart', {
-    url: '/page2',
+  .state('menu.acercaDe', {
+    url: '/acercade',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/cart.html',
-        controller: 'cartCtrl'
+        templateUrl: 'templates/acercaDe.html',
+        controller: 'acercaDeCtrl'
       }
     }
   })
 
-  .state('menu.cloud', {
-    url: '/page3',
+  .state('menu.usuario', {
+    url: '/Usuario',
     views: {
       'side-menu21': {
-        templateUrl: 'templates/cloud.html',
-        controller: 'cloudCtrl'
+        templateUrl: 'templates/usuario.html',
+        controller: 'usuarioCtrl'
       }
     }
   })
@@ -88,6 +88,16 @@ angular.module('app.routes', [])
       'side-menu21': {
         templateUrl: 'templates/completarPalabras1.html',
         controller: 'completarPalabras1Ctrl'
+      }
+    }
+  })
+
+  .state('menu.instrucciones', {
+    url: '/instrucciones',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/instrucciones.html',
+        controller: 'instruccionesCtrl'
       }
     }
   })
