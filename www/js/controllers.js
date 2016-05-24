@@ -1,4 +1,4 @@
-angular.module('app.controllers', [])
+angular.module('app.controllers', ['ionic'])
 
 
 .controller('homeCtrl', function($scope, $http) {
@@ -11,10 +11,35 @@ angular.module('app.controllers', [])
             };
             //$scope.speakText('Bienvenido ' + response.data.nombre);
         });
+
     $scope.speakText = function(text) {
-        var speech = new SpeechSynthesisUtterance(text);
-        speech.lang = 'es-ES';
-        speechSynthesis.speak(speech);
+        //Web
+        try {
+            var speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'es-ES';
+            speechSynthesis.speak(speech);
+        } catch (e) {
+
+            console.log(e);
+        }
+        //Android
+        try {
+            TTS.speak({
+                text: text,
+                locale: 'es-ES',
+                rate: 1.5
+            }, function() {
+                // Do Something after success
+            }, function(reason) {
+                // Handle the error case
+            });
+        } catch (e) {
+            // statements
+            console.log(e);
+        }
+
+
+
     };
 
 
@@ -38,10 +63,35 @@ angular.module('app.controllers', [])
 
 .controller('felicidadesCtrl', function($scope) {
     $scope.speakText = function(text) {
-        var speech = new SpeechSynthesisUtterance(text);
-        speech.lang = 'es-ES';
-        speechSynthesis.speak(speech);
+        //Web
+        try {
+            var speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'es-ES';
+            speechSynthesis.speak(speech);
+        } catch (e) {
+
+            console.log(e);
+        }
+        //Android
+        try {
+            TTS.speak({
+                text: text,
+                locale: 'es-ES',
+                rate: 1.5
+            }, function() {
+                // Do Something after success
+            }, function(reason) {
+                // Handle the error case
+            });
+        } catch (e) {
+            // statements
+            console.log(e);
+        }
+
+
+
     };
+
 
     $scope.speakText('Eres genial, has ganado 10 monedas');
 
@@ -50,9 +100,33 @@ angular.module('app.controllers', [])
 
 .controller('vuelveAIntentarloCtrl', function($scope) {
     $scope.speakText = function(text) {
-        var speech = new SpeechSynthesisUtterance(text);
-        speech.lang = 'es-ES';
-        speechSynthesis.speak(speech);
+        //Web
+        try {
+            var speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'es-ES';
+            speechSynthesis.speak(speech);
+        } catch (e) {
+
+            console.log(e);
+        }
+        //Android
+        try {
+            TTS.speak({
+                text: text,
+                locale: 'es-ES',
+                rate: 1.5
+            }, function() {
+                // Do Something after success
+            }, function(reason) {
+                // Handle the error case
+            });
+        } catch (e) {
+            // statements
+            console.log(e);
+        }
+
+
+
     };
 
     $scope.speakText('Puedes hacerlo mejor, pero toma 2 monedas');
@@ -66,9 +140,33 @@ angular.module('app.controllers', [])
 
 
     $scope.speakText = function(text) {
-        var speech = new SpeechSynthesisUtterance(text);
-        speech.lang = 'es-ES';
-        speechSynthesis.speak(speech);
+        //Web
+        try {
+            var speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'es-ES';
+            speechSynthesis.speak(speech);
+        } catch (e) {
+
+            console.log(e);
+        }
+        //Android
+        try {
+            TTS.speak({
+                text: text,
+                locale: 'es-ES',
+                rate: 1.5
+            }, function() {
+                // Do Something after success
+            }, function(reason) {
+                // Handle the error case
+            });
+        } catch (e) {
+            // statements
+            console.log(e);
+        }
+
+
+
     };
 
     $scope.speakText('Selecciona solo una opcion');
@@ -84,7 +182,7 @@ angular.module('app.controllers', [])
                 reload: true
             });
         } else {
-        	//$scope.speakText('Puedes hacerlo mejor, pero toma 2 monedas');
+            //$scope.speakText('Puedes hacerlo mejor, pero toma 2 monedas');
             $state.go('vuelveAIntentarlo', {}, {
                 reload: true
             });
